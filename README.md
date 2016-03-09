@@ -6,6 +6,11 @@ Flexibility in Magento eCommerce Shipping.
 
 If you want to adding new shipping rules in Magento in an easy way and no writting any code, then use that. Please, watch [this quick video for more information](https://www.youtube.com/watch?v=QxRpQwl0cEc).
 
+## Modgit Install
+
+`modgit add mage-mod-easy-shipping-rules-fd git@github.com:flintdigital/mage-mod-easy-shipping-rules-fd.git`
+
+
 ## Contributing
 
 Just fork it and submit us your pull request, my friend!
