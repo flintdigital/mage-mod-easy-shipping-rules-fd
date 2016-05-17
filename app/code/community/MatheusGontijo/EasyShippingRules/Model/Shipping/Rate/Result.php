@@ -21,9 +21,11 @@ class MatheusGontijo_EasyShippingRules_Model_Shipping_Rate_Result
     public function addCustomMethods(Mage_Sales_Model_Quote $quote)
     {
         /** @var MatheusGontijo_EasyShippingRules_Model_Custommethod $methods */
+        //var_dump($quote);
+        $storeId = $quote->getStoreId();
         $methods = Mage::getModel('easyshippingrules/custommethod')
             ->getCollection()
-            ->prepareAvailableMethods();
+            ->prepareAvailableMethods($storeId);
 
         $address = $quote->getShippingAddress();
 

@@ -46,7 +46,7 @@ class MatheusGontijo_EasyShippingRules_Model_Resource_Custommethod_Collection
      *
      * @return $this
      */
-    public function prepareAvailableMethods()
+    public function prepareAvailableMethods($storeId = null)
     {
         $this->addFieldToFilter('main_table.easyshippingrules_carrier_id', array('notnull' => true));
         $this->addFieldToFilter('c.is_active', true);
@@ -56,9 +56,8 @@ class MatheusGontijo_EasyShippingRules_Model_Resource_Custommethod_Collection
 
         $storeIds = array(
             Mage_Core_Model_App::ADMIN_STORE_ID,
-            Mage::app()->getStore(true)->getId(),
+            $storeId,
         );
-
         $this
             ->getSelect()
             ->join(
